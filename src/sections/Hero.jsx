@@ -44,8 +44,8 @@ const Hero = () => {
                                 <div className='flex flex-col items-center gap-2'>
                                     <div className="text-4xl">{slides[currentSlide].icon}</div>
 
-                                    <div className="text-center">
-                                        <div className='bg-white rounded-full px-4 py-2 flex items-center gap-2'>
+                                    <div className="">
+                                        <div className='bg-white rounded-full px-4 py-2 flex items-center gap-2 justify-between shadow-sm'>
                                             <h3 className="text-md text-gray-900 ">
                                                 {slides[currentSlide].title.first}
                                             </h3>
@@ -59,7 +59,7 @@ const Hero = () => {
                                             </h3>
 
                                         </div>
-                                        <p className="text-gray-600 mb-6">
+                                        <p className="text-gray-600 mt-4 mb-6">
                                             {slides[currentSlide].subtitle}
                                         </p>
 
@@ -80,14 +80,14 @@ const Hero = () => {
 
                             {/* Login Buttons */}
                             <div className="space-y-4 mt-8">
-                                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors flex items-center justify-center space-x-3 shadow-lg">
+                                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-3xl transition-colors flex items-center justify-center space-x-3 shadow-lg">
                                     <span className="text-xl">G</span>
                                     <span>Sign in with Google (zkLogin)</span>
                                 </button>
 
                                 <div className="text-center text-gray-500">or</div>
 
-                                <button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-xl transition-all transform hover:scale-[1.02] flex items-center justify-center space-x-2 shadow-lg">
+                                <button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-3xl transition-all transform hover:scale-[1.02] flex items-center justify-center space-x-2 shadow-lg">
                                     <span>Connect your SUI Wallet</span>
                                     <ArrowRight className="w-5 h-5" />
                                 </button>
@@ -107,63 +107,63 @@ const Hero = () => {
                     </div>
 
 
-                    <div className='col-span-12 md:col-span-6 p-4'>
+                    <div className='col-span-12 md:col-span-6'>
                         {/* Right Column - Discover More */}
-                        <div className="space-y-8">
-                            <div className="text-center lg:text-left">
-                                <h2 className="text-3xl font-bold text-gray-900 mb-4">Discover More</h2>
-                                <p className="text-gray-600 mb-8">Watch these videos about PIVY on SUI</p>
-                            </div>
-
-                            <div className="grid gap-6">
-                                <VideoCard
-                                    title="PIVY IT UP Music!"
-                                    subtitle="See what PIVY's is all about"
-                                    thumbnail={
-                                        <div className="w-full h-full bg-gradient-to-br from-pink-200 to-yellow-200 flex items-center justify-center">
-                                            <div className="text-4xl">🎵</div>
-                                        </div>
-                                    }
-                                    isLarge={true}
-                                />
-
-                                <div className="grid grid-cols-2 gap-6">
-                                    <VideoCard
-                                        title="Technical Demo"
-                                        subtitle="See PIVY's technical overview"
-                                        thumbnail={
-                                            <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                                                <div className="text-2xl">⚙️</div>
-                                            </div>
-                                        }
-                                    />
-
-                                    <VideoCard
-                                        title="Walkthrough Demo"
-                                        subtitle="Demonstrates the core functionality and user experience of Pivy!"
-                                        thumbnail={
-                                            <div className="w-full h-full bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
-                                                <div className="text-2xl">🎥</div>
-                                            </div>
-                                        }
-                                    />
+                        <div className='bg-gray-50 p-4 rounded-3xl border border-gray-100'>
+                            <div className="flex flex-col">
+                                <div className="text-center">
+                                    <h2 className="text-xl font-bold text-gray-900 ">Discover More</h2>
+                                    <p className="text-gray-400 text-sm mb-5">Watch these videos about PIVY on SUI</p>
                                 </div>
-                            </div>
 
-                            <button className="w-full bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-4 px-6 rounded-xl transition-colors flex items-center justify-center space-x-2">
-                                <span>View Deck Presentation</span>
-                                <ArrowRight className="w-5 h-5" />
-                            </button>
+                                <div className="grid md:grid-cols-2 grid-cols-1  gap-4">
+                                    <VideoCard
+                                        title="PIVY IT UP Music!"
+                                        subtitle="See what PIVY's is all about"
+                                        thumbnail={
+                                            <div className="w-full h-full bg-gradient-to-br from-pink-200 to-yellow-200 flex items-center justify-center">
+                                                <div className="text-4xl">🎵</div>
+                                            </div>
+                                        }
+                                    />
 
-                            {/* As seen on */}
-                            <div className="text-center">
-                                <p className="text-gray-500 text-sm mb-4">As seen on</p>
-                                <div className="bg-white rounded-xl p-4 shadow-sm">
-                                    <div className="font-bold text-xl text-gray-900">
-                                        BE<span className="text-blue-600">{'{in}'}</span>CRYPTO
+                                        <VideoCard
+                                            title="Technical Demo"
+                                            subtitle="See PIVY's technical overview"
+                                            thumbnail={
+                                                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                                                    <div className="text-2xl">⚙️</div>
+                                                </div>
+                                            }
+                                        />
+
+                                        <VideoCard
+                                            title="Walkthrough Demo"
+                                            subtitle="Demonstrates the core functionality and user experience of Pivy!"
+                                            thumbnail={
+                                                <div className="w-full h-full bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
+                                                    <div className="text-2xl">🎥</div>
+                                                </div>
+                                            }
+                                        />
+                                </div>
+
+                                <button className="w-full bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-4 px-6 rounded-xl transition-colors flex items-center justify-center space-x-2">
+                                    <span>View Deck Presentation</span>
+                                    <ArrowRight className="w-5 h-5" />
+                                </button>
+
+                                {/* As seen on */}
+                                <div className="text-center">
+                                    <p className="text-gray-500 text-sm mb-4">As seen on</p>
+                                    <div className="bg-white rounded-xl p-4 shadow-sm">
+                                        <div className="font-bold text-xl text-gray-900">
+                                            BE<span className="text-blue-600">{'{in}'}</span>CRYPTO
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>

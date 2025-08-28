@@ -14,19 +14,34 @@ export const networks = [
   ];
 
 export const slides = [
-    {
-      title: "pivy.me/ emma / coaching",
-      subtitle: "Book a personal coaching session with Emma",
-      icon: "🎯"
+  {
+    title: {
+      first : 'pivy.me/',
+      second: 'emma',
+      third: '/',
+      fourth: 'coaching',
     },
-    {
-      title: "pivy.me/ shop / merch", 
-      subtitle: "Get exclusive PIVY merchandise",
-      icon: "🛍️"
+    subtitle: "Book a personal coaching session with Emma",
+    icon: "🎯"
+  },
+  {
+    title: {
+      first : 'pivy.me/',
+      second: 'shop',
+      third: '/',
+      fourth: 'merch',
     },
-    {
-      title: "pivy.me/ donate / climate",
-      subtitle: "Support climate action initiatives",
-      icon: "🌍"
-    }
-  ];
+    subtitle: "Get exclusive PIVY merchandise",
+    icon: "🛍️"
+  },
+  {
+    title: {
+      first : 'pivy.me/',
+      second: 'donate',
+      third: '/',
+      fourth: 'climate',
+    },
+    subtitle: "Support climate action initiatives",
+    icon: "🌍"
+  }
+];

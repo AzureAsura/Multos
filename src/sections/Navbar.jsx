@@ -71,21 +71,16 @@ const Navbar = () => {
 
                         {/* Dropdown Menu */}
                         {isOpen && (
-                            <div className="absolute top-full right-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 min-w-[180px] animate-in slide-in-from-top-2 duration-500">
+                            <div className="absolute top-full right-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 min-w-32 animate-in slide-in-from-top-2 duration-500">
                                 <div className="p-1 space-y-0.5">
                                     {networks.map((network) => (
                                         <button
                                             key={network.id}
                                             onClick={() => handleSelect(network.id)}
                                             className={clsx(
-                                                'w-full rounded-lg px-3 py-2.5 transition-all duration-150 flex items-center justify-between group text-left',
-                                                {
-                                                    'bg-gray-50 shadow-sm': selectedNetwork === network.id,
-                                                    'hover:bg-gray-25': selectedNetwork !== network.id
-                                                }
-                                            )}
+                                                'w-full rounded-lg px-3 py-2.5 transition-all duration-150 flex items-center justify-between group text-left', {'bg-gray-200 shadow-sm': selectedNetwork === network.id, 'hover:bg-gray-25': selectedNetwork !== network.id})}
                                         >
-                                            <div className="flex items-center gap-2.5">
+                                            <div className="flex items-center gap-1.5">
                                                 <div className="w-5 h-5 flex-shrink-0">
                                                     {typeof network.icon === 'string' ? (
                                                         <img 
@@ -102,7 +97,7 @@ const Navbar = () => {
                                                 </span>
                                             </div>
                                             {selectedNetwork === network.id && (
-                                                <Check className="w-4 h-4 text-black flex-shrink-0" />
+                                                <Check className="w-3.5 h-3.5 text-black flex-shrink-0" />
                                             )}
                                         </button>
                                     ))}

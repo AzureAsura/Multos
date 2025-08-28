@@ -12,3 +12,21 @@ export const networks = [
       color: 'from-purple-400 to-green-400'
     },
   ];
+
+export const slides = [
+    {
+      title: "pivy.me/ emma / coaching",
+      subtitle: "Book a personal coaching session with Emma",
+      icon: "🎯"
+    },
+    {
+      title: "pivy.me/ shop / merch", 
+      subtitle: "Get exclusive PIVY merchandise",
+      icon: "🛍️"
+    },
+    {
+      title: "pivy.me/ donate / climate",
+      subtitle: "Support climate action initiatives",
+      icon: "🌍"
+    }
+  ];

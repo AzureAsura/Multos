@@ -64,7 +64,7 @@ const LeftHero = () => {
                 {/* Live Status */}
                 <div className="bg-purple-50 shadow-md rounded-xl p-9 mt-8 flex flex-col items-center justify-center w-full">
                     <div className="flex items-center">
-                        <span className="text-purple-800 font-sm">One Transaction, Many Recipients</span>
+                        <span className="text-purple-800 font-medium">One Transaction, Many Recipients</span>
                     </div>
                     <ul className='text-sm mt-1 text-purple-800 list-disc list-inside'>
                         <li>DAOs & Communities → Pay members, contributors, or reward programs.</li>

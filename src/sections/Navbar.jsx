@@ -4,10 +4,11 @@ import 'remixicon/fonts/remixicon.css'
 import clsx from 'clsx';
 import { networks } from '../constants';
 import { ChevronDown, ChevronUp, Check } from 'lucide-react';
+import aptosLogo from '/aptos.svg'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedNetwork, setSelectedNetwork] = useState('sui');
+    const [selectedNetwork, setSelectedNetwork] = useState('aptos');
     const dropdownRef = useRef(null);
 
     const selectedNetworkData = networks.find(n => n.id === selectedNetwork);
@@ -31,8 +32,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className='w-full fixed px-[1rem] md:px-0 max-w-2xl z-50 py-0 md:py-4 left-1/2 -translate-x-1/2 top-[1rem]'>
-            <div className='flex flex-row items-center justify-between bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 min-h-[4.5rem]'>
+        <nav className='w-full fixed px-[1rem] md:px-0 max-w-3xl z-50 py-0 md:py-4 left-1/2 -translate-x-1/2 top-[1rem]'>
+            <div className='flex flex-row items-center justify-between bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-gray-100 min-h-[4.5rem]'>
                 <a href="">
                     <img src={logo} alt="Pivy Logo" className='h-9' />
                 </a>
@@ -41,7 +42,7 @@ const Navbar = () => {
                     <div className="relative" ref={dropdownRef}>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={clsx('bg-gray-100 backdrop-blur-sm rounded-xl px-3 py-3 transition-all duration-200 flex items-center justify-between hover:bg-gray-200 min-w-32')}
+                            className={clsx('bg-gray-100 backdrop-blur-sm rounded-3xl px-3 py-3 transition-all duration-200 flex items-center justify-between hover:bg-gray-200 min-w-32')}
                         >
                             <div className="flex items-center gap-1.5">
                                 <div className="w-5 h-5 flex-shrink-0 flex items-center justify-center"> 
@@ -109,9 +110,10 @@ const Navbar = () => {
                     {/* Twitter/X Link */}
                     <a
                         href="#"
-                        className="flex items-center justify-center w-10 h-10  rounded-xl"
+                        className="flex items-center justify-center w-10 h-10 ml-4 rounded-xl"
                     >
-                        <i className="ri-twitter-x-line text-gray-700 text-2xl"></i>
+                        <img src={aptosLogo} alt=""className='h-8'/>
+                        
                     </a>
                 </div>
             </div>

@@ -39,7 +39,7 @@ const LeftHero = () => {
                 {/* Login Buttons */}
                 <div className='flex flex-col mt-5 md:mt-9 gap-3 w-full mb-7 md:mb-4'>
                     <div className="flex justify-center">
-                        <button className="w-full max-w-[450px] bg-[#E03838] text-white font-semibold py-2 px-6 rounded-3xl transition-all transform hover:scale-[1.02] flex items-center justify-center space-x-2 hover:shadow-lg">
+                        <button className="w-full max-w-[150px] bg-[#E03838] text-white font-semibold py-2 px-6 rounded-3xl transition-all transform hover:scale-[1.02] flex items-center justify-center space-x-2 hover:shadow-lg">
                             <span>Google Login</span>
                         </button>
                     </div>

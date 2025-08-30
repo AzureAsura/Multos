@@ -5,46 +5,8 @@ export const networks = [
       icon: '/aptos.svg',
       color: 'from-blue-400 to-blue-600'
     },
-    {
-      id: 'solana',
-      name: 'Solana',
-      icon: '/solana.svg',
-      color: 'from-purple-400 to-green-400'
-    },
   ];
 
-export const slides = [
-  {
-    title: {
-      first : 'pivy.me/',
-      second: 'emma',
-      third: '/',
-      fourth: 'coaching',
-    },
-    subtitle: "Book a personal coaching session with Emma",
-    icon: "🎯"
-  },
-  {
-    title: {
-      first : 'pivy.me/',
-      second: 'shop',
-      third: '/',
-      fourth: 'merch',
-    },
-    subtitle: "Get exclusive PIVY merchandise",
-    icon: "🛍️"
-  },
-  {
-    title: {
-      first : 'pivy.me/',
-      second: 'donate',
-      third: '/',
-      fourth: 'climate',
-    },
-    subtitle: "Support climate action initiatives",
-    icon: "🌍"
-  }
-];
 
 export const heroItems = [
   {
@@ -58,5 +20,28 @@ export const heroItems = [
     caption: 'DAOs, DeFi protocols, and communities often need to send tokens to hundreds or even thousands of wallets – for airdrops, rewards, salaries, or liquidity incentives.',
     caption2: 'Doing this manually is slow, expensive, and error-prone.'
   },
+  
+]
+
+export const purpleItems = [
+  {
+    id: '1',
+    icon: '🚀',
+    title: 'Projects & Startups',
+    caption: 'Run scalable token airdrops with one click.',
+  },
+  {
+    id: '2',
+    icon: '👥',
+    title: 'DAOs & Communities',
+    caption: 'Pay members, contributors, or reward programs.',
+  },
+  {
+    id: '3',
+    icon: '⚡️',
+    title: 'DeFi Protocols',
+    caption: 'Distribute farming yields, staking rewards, or LP incentives.',
+  },
+  
   
 ]

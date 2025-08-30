@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
+import Footer from './sections/Footer'
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
     <div className='bg-gray-50'>
       <Navbar/>
       <Hero/>
+      <Footer/>
     </div>
     </>
   )

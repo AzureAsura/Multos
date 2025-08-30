@@ -5,6 +5,24 @@ import clsx from 'clsx';
 import { networks } from '../constants';
 import { ChevronDown, ChevronUp, Check } from 'lucide-react';
 import aptosLogo from '/aptos.svg'
+import { motion } from 'framer-motion'
+
+
+const navVariants = {
+    hidden: {
+        opacity: 0,
+        y: -100,
+    },
+    show: {
+        opacity: 1,
+        y: 0, // Bergerak ke posisi normal
+        transition: {
+            duration: 0.5,
+            ease: "easeOut",
+            delay: 1.2,
+        },
+    },
+};
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +51,11 @@ const Navbar = () => {
 
     return (
         <nav className='w-full fixed px-[1rem] md:px-0 max-w-3xl z-50 py-0 md:py-4 left-1/2 -translate-x-1/2 top-[1rem]'>
-            <div className='flex flex-row items-center justify-between bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-gray-100 min-h-[4.5rem]'>
+            <motion.div
+                variants={navVariants}
+                initial='hidden'
+                animate='show'
+                className='flex flex-row items-center justify-between bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-gray-100 min-h-[4.5rem]'>
                 <a href="">
                     <img src={logo} alt="Pivy Logo" className='h-9' />
                 </a>
@@ -45,7 +67,7 @@ const Navbar = () => {
                             className={clsx('bg-gray-100 backdrop-blur-sm rounded-3xl px-3 py-3 transition-all duration-200 flex items-center justify-between hover:bg-gray-200 min-w-32')}
                         >
                             <div className="flex items-center gap-1.5">
-                                <div className="w-5 h-5 flex-shrink-0 flex items-center justify-center"> 
+                                <div className="w-5 h-5 flex-shrink-0 flex items-center justify-center">
                                     {typeof selectedNetworkData?.icon === 'string' ? (
                                         <img
                                             src={selectedNetworkData.icon}
@@ -79,14 +101,14 @@ const Navbar = () => {
                                             key={network.id}
                                             onClick={() => handleSelect(network.id)}
                                             className={clsx(
-                                                'w-full rounded-lg px-3 py-2.5 transition-all duration-150 flex items-center justify-between group text-left', {'bg-gray-200 shadow-sm': selectedNetwork === network.id, 'hover:bg-gray-25': selectedNetwork !== network.id})}
+                                                'w-full rounded-lg px-3 py-2.5 transition-all duration-150 flex items-center justify-between group text-left', { 'bg-gray-200 shadow-sm': selectedNetwork === network.id, 'hover:bg-gray-25': selectedNetwork !== network.id })}
                                         >
                                             <div className="flex items-center gap-1.5">
                                                 <div className="w-5 h-5 flex-shrink-0">
                                                     {typeof network.icon === 'string' ? (
-                                                        <img 
-                                                            src={network.icon} 
-                                                            alt={network.name} 
+                                                        <img
+                                                            src={network.icon}
+                                                            alt={network.name}
                                                             className="w-5 h-5 object-contain"
                                                         />
                                                     ) : (
@@ -112,11 +134,11 @@ const Navbar = () => {
                         href="#"
                         className="flex items-center justify-center w-10 h-10 ml-4 rounded-xl"
                     >
-                        <img src={aptosLogo} alt=""className='h-8'/>
-                        
+                        <img src={aptosLogo} alt="" className='h-8' />
+
                     </a>
                 </div>
-            </div>
+            </motion.div>
         </nav>
     )
 }

@@ -11,14 +11,14 @@ export const networks = [
 export const heroItems = [
   {
     id: '1',
-    title: 'One Transaction, Many Recipients',
-    caption: 'Multisender lets you distribute tokens to multiple addresses in a single Aptos transaction – making token distribution faster, cheaper, and transparent.',
-  },
-  {
-    id: '2',
     title: 'Token Distribution Doesn’t Have to Be Hard',
     caption: 'DAOs, DeFi protocols, and communities often need to send tokens to hundreds or even thousands of wallets – for airdrops, rewards, salaries, or liquidity incentives.',
     caption2: 'Doing this manually is slow, expensive, and error-prone.'
+  },
+  {
+    id: '2',
+    title: 'One Transaction, Many Recipients',
+    caption: 'Multisender lets you distribute tokens to multiple addresses in a single Aptos transaction – making token distribution faster, cheaper, and transparent.',
   },
   
 ]
@@ -42,6 +42,32 @@ export const purpleItems = [
     title: 'DeFi Protocols',
     caption: 'Distribute farming yields, staking rewards, or LP incentives.',
   },
-  
-  
 ]
+
+export const wallets = [
+        {
+            id: 1,
+            name: 'Petra Wallet',
+            icon: '/petra.svg',
+        },
+        {
+            id: 2,
+            name: 'Aptos Connect',
+            icon: '/aptospopup.svg',
+        },
+        {
+            id: 3,
+            name: 'Bitget Wallet',
+            icon: '/bidget.svg',
+        },
+        {
+            id: 4,
+            name: 'Trust Wallet',
+            icon: '/trust.svg',
+        },
+        {
+            id: 5,
+            name: 'OKX Wallet',
+            icon: '/okx.svg',
+        },
+    ];

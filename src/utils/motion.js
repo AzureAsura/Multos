@@ -1,32 +1,22 @@
-export const heroVariants = {
-  hidden: {
+export const bounceCardVariants = {
+    hidden: {
     opacity: 0,
-    x: 300, // Mulai dari posisi 100px ke kanan
+    scale: 0.3, // Mulai dari sangat kecil
+    rotate: -10, // Sedikit rotasi untuk efek tambahan
   },
   show: {
     opacity: 1,
-    x: 0, // Bergerak ke posisi normal
     scale: 1, // Kembali ke ukuran normal
+    rotate: 0, // Kembali ke rotasi normal
     transition: {
-      duration: 0.5,
+      duration: 0.8,
       ease: "easeOut",
+      scale: {
+        type: "spring",
+        damping: 10, // Kontrol bounce (semakin kecil = lebih bouncy)
+        stiffness: 100, // Kekuatan spring
+      },
+      delay: 0.2,
     },
   },
 };
-
-export const bodyLeftVariants = {
-  hidden: {
-    opacity: 0,
-    y: 100, // Mulai dari posisi 100px ke kanan
-  },
-  show: {
-    opacity: 1,
-    y: 0, // Bergerak ke posisi normal
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-      delay: 0.5,
-    },
-  },
-};
-

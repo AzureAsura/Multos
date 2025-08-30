@@ -6,23 +6,9 @@ import { networks } from '../constants';
 import { ChevronDown, ChevronUp, Check } from 'lucide-react';
 import aptosLogo from '/aptos.svg'
 import { motion } from 'framer-motion'
+import logo2 from '/multos.png'
 
 
-const navVariants = {
-    hidden: {
-        opacity: 0,
-        y: -100,
-    },
-    show: {
-        opacity: 1,
-        y: 0, // Bergerak ke posisi normal
-        transition: {
-            duration: 0.5,
-            ease: "easeOut",
-            delay: 1.2,
-        },
-    },
-};
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -51,14 +37,15 @@ const Navbar = () => {
 
     return (
         <nav className='w-full fixed px-[1rem] md:px-0 max-w-3xl z-50 py-0 md:py-4 left-1/2 -translate-x-1/2 top-[1rem]'>
-            <motion.div
-                variants={navVariants}
-                initial='hidden'
-                animate='show'
+            <div
+
                 className='flex flex-row items-center justify-between bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-gray-100 min-h-[4.5rem]'>
-                <a href="">
-                    <img src={logo} alt="Pivy Logo" className='h-9' />
-                </a>
+
+                    <a href="" className='flex'>
+                        <img src={logo2} alt="Pivy Logo" className='h-12' />
+                        <span className='flex items-center text-lg font-bold pl-2'>Multos</span>
+                    </a>
+
 
                 <div className='flex flex-row items-center gap-1.5 h-full'>
                     <div className="relative" ref={dropdownRef}>
@@ -138,7 +125,7 @@ const Navbar = () => {
 
                     </a>
                 </div>
-            </motion.div>
+            </div>
         </nav>
     )
 }

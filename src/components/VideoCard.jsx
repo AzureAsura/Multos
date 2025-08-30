@@ -1,25 +1,7 @@
 import React from 'react'
 import { Play, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
-
-// Animasi bounce scale untuk VideoCard
-const bounceCardVariants = {
-    hidden: {
-        opacity: 0,
-        scale: 0.3,
-        rotate: -5,
-    },
-    show: {
-        opacity: 1,
-        scale: 1,
-        rotate: 0,
-        transition: {
-            opacity: { delay: 1.8, duration: 0.6, ease: "easeOut" },
-            scale: { delay: 1.8, type: "spring", damping: 12, stiffness: 120 },
-            rotate: { delay: 1.8, duration: 0.6, ease: "easeOut" },
-        },
-    },
-};
+import { bounceCardVariants } from '../utils/motion'
 
 const VideoCard = ({ title, subtitle, thumbnail, isLarge = false }) => {
     return (
@@ -27,7 +9,7 @@ const VideoCard = ({ title, subtitle, thumbnail, isLarge = false }) => {
             variants={bounceCardVariants}
             initial="hidden"
             animate="show"
-            whileHover={{ y: -8 , borderColor: "#4ade80"}}
+            whileHover={{ y: -8, borderColor: "#E03838" }}
             className={`bg-white rounded-2xl p-4 border shadow-md`}
         >
             <div className={`rounded-xl h-52 flex items-center justify-center mb-1 relative overflow-hidden group`}>
@@ -43,10 +25,14 @@ const VideoCard = ({ title, subtitle, thumbnail, isLarge = false }) => {
                         <ArrowRight className="w-4 h-4" />
                     </div>
 
+                    {/* <div className="bg-black/50 backdrop-blur-sm text-gray-50 rounded-full p-3 shadow-lg">
+                        <Play className="w-8 h-8 ml-1" />
+                    </div> */}
+
                 </button>
             </div>
-            <h3 className="font-medium text-[14px] text-gray-900">{title}</h3>
-            <p className="text-gray-500 mt-4 text-[12px]">{subtitle}</p>
+            <h3 className="font-medium mt-3 text-[14px] text-gray-900">{title}</h3>
+            <p className="text-gray-500 mt-2 text-[12px]">{subtitle}</p>
         </motion.div>
     )
 }

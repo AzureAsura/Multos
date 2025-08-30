@@ -1,14 +1,14 @@
 import React from 'react'
 import { Play, ArrowRight, X, Menu, ChevronDown } from 'lucide-react';
 import VideoCard from '../components/VideoCard';
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 
 const RightHero = () => {
     return (
-        <motion.div
-                 className='col-span-12 lg:col-span-4'>
+        <div
+            className='col-span-12 md:col-span-4'>
             <div className='bg-gray-50 p-4 rounded-3xl border border-gray-100'>
                 <div className="flex flex-col">
                     <div className="text-center">
@@ -44,7 +44,7 @@ const RightHero = () => {
 
                     </div>
 
-                    <button className="w-full bg-green-400 hover:bg-green-500 text-gray-900 font-semibold mt-7 py-3 px-6 rounded-3xl transition-colors flex items-center justify-center space-x-2">
+                    <button className="w-full bg-[#E03838] text-white  font-semibold mt-7 py-3 px-6 rounded-3xl  flex items-center justify-center space-x-2 transition-all transform hover:scale-[1.02] hover:shadow-lg">
                         <span className='text-sm'>View Deck Presentation</span>
                         <ArrowRight className="w-4 h-4" />
                     </button>
@@ -62,14 +62,14 @@ const RightHero = () => {
                     </div>
 
                     <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold mt-6 py-3 px-6 rounded-3xl transition-colors flex items-center justify-center space-x-2">
-                            <span className='text-sm'>🌏</span>
+                        <span className='text-sm'>🌏</span>
                         <span className='text-sm'>Scaleable</span>
                     </button>
                 </div>
 
             </div>
 
-        </motion.div>
+        </div>
     )
 }
 

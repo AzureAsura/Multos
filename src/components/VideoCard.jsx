@@ -1,15 +1,11 @@
 import React from 'react'
 import { Play, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { bounceCardVariants } from '../utils/motion'
 
 const VideoCard = ({ title, subtitle, thumbnail, isLarge = false }) => {
     return (
         <motion.div
-            variants={bounceCardVariants}
-            initial="hidden"
-            animate="show"
-            whileHover={{ y: -8, borderColor: "#E03838" }}
+whileHover={{ borderColor: "#E03838" }}
             className={`bg-white rounded-2xl p-4 border shadow-md`}
         >
             <div className={`rounded-xl h-52 flex items-center justify-center mb-1 relative overflow-hidden group`}>

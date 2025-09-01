@@ -1,10 +1,25 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
+import { Network } from "@aptos-labs/ts-sdk";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <AptosWalletAdapterProvider
+      autoConnect={true}
+      optInWallets={[
+        "Petra",
+        "AptosConnect",
+        "Bitget",    // ✅ Tambah Bitget
+        "OKX",
+        "Trust",
+      ]}
+      dappConfig={{ network: Network.TESTNET }}
+      onError={(error) => console.error("Wallet Adapter Error:", error)}
+    >
+      <App />
+    </AptosWalletAdapterProvider>
+  </React.StrictMode>
+);

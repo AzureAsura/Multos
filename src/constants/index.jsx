@@ -47,27 +47,27 @@ export const purpleItems = [
 export const wallets = [
         {
             id: 1,
-            name: 'Petra Wallet',
+            name: 'Petra',
             icon: '/petra.svg',
         },
         {
             id: 2,
-            name: 'Aptos Connect',
+            name: 'Aptos',
             icon: '/aptospopup.svg',
         },
         {
             id: 3,
-            name: 'Bitget Wallet',
+            name: 'Bitget',
             icon: '/bidget.svg',
         },
         {
             id: 4,
-            name: 'Trust Wallet',
+            name: 'Trust',
             icon: '/trust.svg',
         },
         {
             id: 5,
-            name: 'OKX Wallet',
+            name: 'OKX',
             icon: '/okx.svg',
         },
     ];

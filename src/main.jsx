@@ -11,10 +11,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       autoConnect={true}
       optInWallets={[
         "Petra",
-        "AptosConnect",
-        "Bitget",    // ✅ Tambah Bitget
-        "OKX",
-        "Trust",
+    "Aptos Connect", // Bukan "AptosConnect"
+    "OKX Wallet",    // Bukan "OKX"
+    "Bitget Wallet",
       ]}
       dappConfig={{ network: Network.TESTNET }}
       onError={(error) => console.error("Wallet Adapter Error:", error)}

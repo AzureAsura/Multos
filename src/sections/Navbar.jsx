@@ -6,7 +6,7 @@ import { networks } from '../constants';
 import { ChevronDown, ChevronUp, Check } from 'lucide-react';
 import aptosLogo from '/aptos.svg'
 import { motion } from 'framer-motion'
-import logo2 from '/multos.png'
+import logo2 from '/multos.svg'
 
 
 

@@ -1,19 +1,20 @@
-import React from 'react'
-import HomePage from './pages/HomePage'
-import JobPage from './pages/JobPage'
-import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom'
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path='/' element={<HomePage />} />
-      <Route path='/jobs' element={<JobPage />} />
-    </>
-  )
-)
+import React from "react";
+import HomePage from "./pages/HomePage";
+import TrxPage from "./pages/TrxPage";
+import { useWallet } from "@aptos-labs/wallet-adapter-react";
 
 const App = () => {
-  return <RouterProvider router={router} />
-}
+  const { connected } = useWallet(); // <-- panggil di dalam component
 
-export default App
+  return (
+    <>
+      {connected ? (
+        <TrxPage />   
+      ) : (
+        <HomePage /> 
+      )}
+    </>
+  );
+};
+
+export default App;

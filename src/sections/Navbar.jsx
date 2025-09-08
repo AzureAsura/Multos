@@ -1,12 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import logo from '/pivy-logo.svg'
 import 'remixicon/fonts/remixicon.css'
 import clsx from 'clsx';
 import { networks } from '../constants';
 import { ChevronDown, ChevronUp, Check } from 'lucide-react';
 import aptosLogo from '/aptos.svg'
-import { motion } from 'framer-motion'
 import logo2 from '/multos.svg'
+import multoslogo from '/multoslogo.png'
 
 
 
@@ -42,7 +41,7 @@ const Navbar = () => {
                 className='flex flex-row items-center justify-between bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-gray-100 min-h-[4.5rem]'>
 
                     <a href="" className='flex'>
-                        <img src={logo2} alt="Pivy Logo" className='h-12' />
+                        <img src={multoslogo} alt="Pivy Logo" className='h-12 rounded-xl' />
                         <span className='flex items-center text-lg font-bold pl-2'>Multos</span>
                     </a>
 

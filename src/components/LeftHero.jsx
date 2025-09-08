@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { containerVariants, itemVariants, cardVariants } from '../utils/motion'
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { useNavigate } from "react-router-dom";
+import multoslogo from '/multoslogo.png'
 
 
 const LeftHero = ({onConnect}) => {
@@ -66,12 +67,12 @@ const LeftHero = ({onConnect}) => {
             >
                 {/* Logo dan Title */}
                 <motion.div variants={itemVariants} className="flex justify-center items-center">
-                    <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start space-y-2 lg:space-y-0 lg:space-x-2">
+                    <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start space-y-2 lg:space-y-0 lg:space-x-3">
                         {/* Logo */}
                         <img
-                            src={logo}
+                            src={multoslogo}
                             alt=""
-                            className="h-16 sm:h-20 md:h-24"
+                            className="h-16 sm:h-20 md:h-24 rounded-xl"
                         />
 
                         {/* Text */}
@@ -80,7 +81,7 @@ const LeftHero = ({onConnect}) => {
                                 Multos
                             </h1>
                             <div className="flex items-center justify-center mt-1 lg:justify-start space-x-2">
-                                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                                {/* <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div> */}
                                 <span className="text-xs sm:text-sm md:text-base text-gray-600 font-medium">
                                     Multi Transaction Token On Aptos
                                 </span>
@@ -93,7 +94,7 @@ const LeftHero = ({onConnect}) => {
 
                 {/* Main Heading */}
                 <motion.div variants={itemVariants}>
-                    <div className="space-y-6 text-center mt-4 ">
+                    <div className="space-y-6 text-center mt-4 md:mt-10 ">
                         <div className="space-y-4">
                             {/* Judul */}
                             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-gray-900">
